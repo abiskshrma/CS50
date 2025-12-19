@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+
+int main(void)
+{   //custom way to check for upper case
+    string s = get_string("Before: ");
+    printf("After: \n");
+    for (int i=0, n=strlen(s); i<n; i++)
+    {
+        if (s[i] >= 'a' && s[i] <='z')
+        {
+            //Change s[i] to uppercase
+            printf("%c" ,s[i]-32);
+        }
+        else
+        {
+            //just print s[i]
+            printf("%c", s[i]);
+        }
+
+    }
+    printf("\n");
+}
